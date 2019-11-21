@@ -110,8 +110,7 @@ function render_to_map(data_markers, filter) {
     	2) Realizo un bucle para decidir que marcadores cumplen el filtro, y los agregamos al mapa
     */
     /*-- 3.2.1 --*/
-    markers = new L.markerClusterGroup(); //renueva el listado de marcadores
-    $(".leaflet-marker-pane").empty(); //elimina del mapa los marcadores actuales
+    markers.clearLayers(); //renueva el listado de marcadores y elimina del mapa los marcadores actuales
 
     addMarkers(data_markers, filter); //para el 3.2.2 se llama a esta función de nuevo
 }
